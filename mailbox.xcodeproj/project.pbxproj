@@ -12,6 +12,7 @@
 		01C814AD1BF3129A00580550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C814AB1BF3129A00580550 /* Main.storyboard */; };
 		01C814AF1BF3129A00580550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C814AE1BF3129A00580550 /* Assets.xcassets */; };
 		01C814B21BF3129A00580550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C814B01BF3129A00580550 /* LaunchScreen.storyboard */; };
+		01C814BA1BF6796B00580550 /* MailboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C814B91BF6796B00580550 /* MailboxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		01C814AE1BF3129A00580550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01C814B11BF3129A00580550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01C814B31BF3129A00580550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01C814B91BF6796B00580550 /* MailboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailboxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				01C814A71BF3129A00580550 /* AppDelegate.swift */,
 				01C814A91BF3129A00580550 /* ViewController.swift */,
 				01C814AB1BF3129A00580550 /* Main.storyboard */,
+				01C814B91BF6796B00580550 /* MailboxViewController.swift */,
 				01C814AE1BF3129A00580550 /* Assets.xcassets */,
 				01C814B01BF3129A00580550 /* LaunchScreen.storyboard */,
 				01C814B31BF3129A00580550 /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				01C814AA1BF3129A00580550 /* ViewController.swift in Sources */,
 				01C814A81BF3129A00580550 /* AppDelegate.swift in Sources */,
+				01C814BA1BF6796B00580550 /* MailboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
