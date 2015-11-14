@@ -41,6 +41,10 @@
                                                     <outletCollection property="gestureRecognizers" destination="BSQ-Pu-UtA" appends="YES" id="4hL-6M-Ygt"/>
                                                 </connections>
                                             </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="archive_icon" id="WaO-p4-kdC">
+                                                <rect key="frame" x="-30" y="29" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.65334825134473684" green="0.94716282894736847" blue="0.5759171247" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -64,6 +68,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="archiveViewIcon" destination="WaO-p4-kdC" id="unT-E2-kcy"/>
                         <outlet property="imageView" destination="3J8-TF-H1H" id="iFl-gy-e89"/>
                         <outlet property="messageView" destination="5DH-II-96V" id="cXI-l6-ihj"/>
                         <outlet property="messageWrapperView" destination="zlk-BR-Y2d" id="Boc-oZ-dzB"/>
@@ -81,6 +86,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="archive_icon" width="25" height="25"/>
         <image name="archive_nav_icon" width="25" height="20"/>
         <image name="feed" width="320" height="1202"/>
         <image name="help_label" width="320" height="37"/>

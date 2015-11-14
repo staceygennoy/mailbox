@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var messageWrapperView: UIView!
     
+    @IBOutlet weak var archiveViewIcon: UIImageView!
+    
     var messageOriginalCenter: CGPoint!
     var messageOffset: CGFloat!
     var messageRight: CGPoint!
