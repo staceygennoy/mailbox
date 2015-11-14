@@ -42,7 +42,7 @@
                                                 </connections>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.85108900070000004" green="0.85108900070000004" blue="0.85108900070000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.65334825134473684" green="0.94716282894736847" blue="0.5759171247" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                             </scrollView>
@@ -66,6 +66,7 @@
                     <connections>
                         <outlet property="imageView" destination="3J8-TF-H1H" id="iFl-gy-e89"/>
                         <outlet property="messageView" destination="5DH-II-96V" id="cXI-l6-ihj"/>
+                        <outlet property="messageWrapperView" destination="zlk-BR-Y2d" id="Boc-oZ-dzB"/>
                         <outlet property="scrollView" destination="Yhx-bJ-aUy" id="Hgm-TW-syc"/>
                     </connections>
                 </viewController>
