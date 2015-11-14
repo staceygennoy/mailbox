@@ -25,14 +25,25 @@
                                         <rect key="frame" x="0.0" y="97" width="320" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="message" id="5DH-II-96V">
-                                        <rect key="frame" x="0.0" y="139" width="320" height="86"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="feed" id="3J8-TF-H1H">
                                         <rect key="frame" x="0.0" y="222" width="320" height="1202"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" id="zlk-BR-Y2d">
+                                        <rect key="frame" x="0.0" y="142" width="320" height="78"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="message" id="5DH-II-96V">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="BSQ-Pu-UtA" appends="YES" id="4hL-6M-Ygt"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.85108900070000004" green="0.85108900070000004" blue="0.85108900070000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                 </subviews>
                             </scrollView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="TTe-2l-pi2">
@@ -54,10 +65,16 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="3J8-TF-H1H" id="iFl-gy-e89"/>
+                        <outlet property="messageView" destination="5DH-II-96V" id="cXI-l6-ihj"/>
                         <outlet property="scrollView" destination="Yhx-bJ-aUy" id="Hgm-TW-syc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="BSQ-Pu-UtA">
+                    <connections>
+                        <action selector="didPanView:" destination="BYZ-38-t0r" id="ncg-BM-sEC"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="237" y="437"/>
         </scene>
