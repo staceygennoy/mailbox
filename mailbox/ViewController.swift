@@ -27,15 +27,10 @@ class ViewController: UIViewController {
         
         scrollView.contentSize = imageView.image!.size
         
-        messageOffset = 160
-        messageRight = CGPoint(x: messageView.center.x - messageOffset, y: messageView.center.y)
-        messageLeft = CGPoint(x: messageView.center.x + messageOffset, y: messageView.center.y)
-
     }
 
   
     @IBAction func didPanMessageView(sender: UIPanGestureRecognizer) {
-        let velocity = sender.velocityInView(view)
         let translation = sender.translationInView(view)
         
         
@@ -43,10 +38,19 @@ class ViewController: UIViewController {
             messageOriginalCenter = messageView.center
             
         } else if sender.state == UIGestureRecognizerState.Changed {
-            // only move the message if the new center is greater than or equal to 464
-            //if (messageOriginalCenter.y + translation.y >= 464) {
-                messageView.center = CGPoint(x: messageOriginalCenter.x + translation.x, y: messageOriginalCenter.y)
-            //}
+           
+            messageView.center = CGPoint(x: messageOriginalCenter.x + translation.x, y: messageOriginalCenter.y)
+
+            
+            let messageLeft = messageView.center.x - 160
+            
+            if messageLeft < -280 {
+                print("user swiped all the way to the left")
+            }
+            
+            if messageLeft > 280 {
+                print("user swiped all the way to the right")
+            }
             
         } else if sender.state == UIGestureRecognizerState.Ended {
             UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options:[] , animations: { () -> Void in
