@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     var messageOffset: CGFloat!
     var messageRight: CGPoint!
     var messageLeft: CGPoint!
+    var archiveOriginalCenter: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +41,12 @@ class ViewController: UIViewController {
         
         if sender.state == UIGestureRecognizerState.Began {
             messageOriginalCenter = messageView.center
+            archiveOriginalCenter = archiveViewIcon.center
             
         } else if sender.state == UIGestureRecognizerState.Changed {
             // Moving the message view along with user's panning
             messageView.center = CGPoint(x: messageOriginalCenter.x + translation.x, y: messageOriginalCenter.y)
+            archiveViewIcon.center = CGPoint(x: archiveOriginalCenter.x + translation.x, y: archiveOriginalCenter.y)
 
             // detect when message has moved all the way to either left or right
             let messageLeft = messageView.center.x - 160
@@ -66,6 +69,7 @@ class ViewController: UIViewController {
         } else if sender.state == UIGestureRecognizerState.Ended {
             UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options:[] , animations: { () -> Void in
                 self.messageView.center = self.messageOriginalCenter
+                self.archiveViewIcon.center = self.archiveOriginalCenter
             }, completion: {
                 (Bool) -> Void in
             })
