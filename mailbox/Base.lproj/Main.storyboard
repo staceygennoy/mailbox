@@ -49,6 +49,14 @@
                                                 <rect key="frame" x="-30" y="29" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="later_icon" id="Pvc-f4-QNp">
+                                                <rect key="frame" x="330" y="26" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="list_icon" id="Q2J-hX-c73">
+                                                <rect key="frame" x="330" y="26" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.65334825134473684" green="0.94716282894736847" blue="0.5759171247" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -75,6 +83,8 @@
                         <outlet property="archiveViewIcon" destination="WaO-p4-kdC" id="unT-E2-kcy"/>
                         <outlet property="deleteViewIcon" destination="N49-Pp-Ajb" id="R7I-gJ-07o"/>
                         <outlet property="imageView" destination="3J8-TF-H1H" id="iFl-gy-e89"/>
+                        <outlet property="laterViewIcon" destination="Pvc-f4-QNp" id="xjp-WT-Vqy"/>
+                        <outlet property="listViewIcon" destination="Q2J-hX-c73" id="TCK-Nf-FaU"/>
                         <outlet property="messageView" destination="5DH-II-96V" id="cXI-l6-ihj"/>
                         <outlet property="messageWrapperView" destination="zlk-BR-Y2d" id="Boc-oZ-dzB"/>
                         <outlet property="scrollView" destination="Yhx-bJ-aUy" id="Hgm-TW-syc"/>
@@ -96,7 +106,9 @@
         <image name="delete_icon" width="25" height="25"/>
         <image name="feed" width="320" height="1202"/>
         <image name="help_label" width="320" height="37"/>
+        <image name="later_icon" width="25" height="25"/>
         <image name="later_nav_icon" width="25" height="20"/>
+        <image name="list_icon" width="25" height="25"/>
         <image name="mail_nav_icon" width="25" height="20"/>
         <image name="message" width="320" height="86"/>
         <image name="nav" width="320" height="65"/>
