@@ -37,7 +37,7 @@ class ViewController: UIViewController {
   
     @IBAction func didPanMessageView(sender: UIPanGestureRecognizer) {
         let translation = sender.translationInView(view)
-        let velocity = sender.velocityInView(view)
+       // let velocity = sender.velocityInView(view)
         
         if sender.state == UIGestureRecognizerState.Began {
             messageOriginalCenter = messageView.center
@@ -48,23 +48,19 @@ class ViewController: UIViewController {
             messageView.center = CGPoint(x: messageOriginalCenter.x + translation.x, y: messageOriginalCenter.y)
             archiveViewIcon.center = CGPoint(x: archiveOriginalCenter.x + translation.x, y: archiveOriginalCenter.y)
 
-            // detect when message has moved all the way to either left or right
-            let messageLeft = messageView.center.x - 160
-            if messageLeft < -280 {
-             //   print("user swiped all the way to the left")
-            }
-            if messageLeft > 280 {
-             //   print("user swiped all the way to the right")
-            }
             
-            // change the color based on which direction
-            if velocity.x > 0 {
-                messageWrapperView.backgroundColor = UIColor.redColor()
+            // detect where the message is, in order to set the background color
+            let messageLeft = messageView.center.x - 160
+            if (messageLeft < 0) {
+                messageWrapperView.backgroundColor = UIColor.yellowColor()
             }
-            else if velocity.x < 0 {
+            if (messageLeft > 0 && messageLeft <= 220) {
                 messageWrapperView.backgroundColor = UIColor.init(colorLiteralRed: 127/255, green: 228/255, blue: 134/255, alpha: 1)
             }
-            
+            if messageLeft > 220 {
+                messageWrapperView.backgroundColor = UIColor.redColor()
+            }
+
             
         } else if sender.state == UIGestureRecognizerState.Ended {
             UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options:[] , animations: { () -> Void in
