@@ -30,7 +30,12 @@ class ViewController: UIViewController {
     
     @IBAction func laterButton(sender: UIButton) {
         rescheduleWrapperView.alpha = 0
+        // todo: make this animated
+        
+        
         imageView.center.y = imageView.center.y - 86
+        
+        
         messageWrapperView.alpha = 0
         
     }
@@ -115,6 +120,7 @@ class ViewController: UIViewController {
             if (messageLeft < -50 && messageLeft >= -220) {
                 //yellow
                 print("show reschedule")
+                
                 self.rescheduleWrapperView.alpha = 1
                
             }
