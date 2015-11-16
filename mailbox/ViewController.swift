@@ -25,9 +25,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var laterViewIcon: UIImageView!
     
     @IBOutlet weak var listViewIcon: UIImageView!
-    
 
     @IBOutlet weak var rescheduleWrapperView: UIView!
+    
+    @IBAction func laterButton(sender: UIButton) {
+        rescheduleWrapperView.alpha = 0
+        imageView.center.y = imageView.center.y - 86
+        messageWrapperView.alpha = 0
+        
+    }
     
     var messageOriginalCenter: CGPoint!
     var messageOffset: CGFloat!
@@ -130,6 +136,7 @@ class ViewController: UIViewController {
                 self.archiveViewIcon.center = self.archiveOriginalCenter
                 self.deleteViewIcon.center = self.deleteOriginalCenter
                 self.laterViewIcon.center = self.laterOriginalCenter
+                self.listViewIcon.center = self.listOriginalCenter
                 }, completion: {
                     (Bool) -> Void in
             })
