@@ -32,10 +32,11 @@ class ViewController: UIViewController {
         rescheduleWrapperView.alpha = 0
         // todo: make this animated
         
-        
-        imageView.center.y = imageView.center.y - 86
-        
-        
+    UIView.animateWithDuration(0.2) { () -> Void in
+        self.imageView.center.y = self.imageView.center.y - 86
+        }
+
+
         messageWrapperView.alpha = 0
         
     }
