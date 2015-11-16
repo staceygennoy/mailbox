@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var listViewIcon: UIImageView!
     
+
+    @IBOutlet weak var rescheduleWrapperView: UIView!
+    
     var messageOriginalCenter: CGPoint!
     var messageOffset: CGFloat!
     var messageRight: CGPoint!
@@ -40,6 +43,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         scrollView.contentSize = imageView.image!.size
+        
+        self.rescheduleWrapperView.alpha = 0
         
     }
 
@@ -98,14 +103,37 @@ class ViewController: UIViewController {
 
             
         } else if sender.state == UIGestureRecognizerState.Ended {
+            
+            // detect where the message is, in order to set the background color
+            let messageLeft = messageView.center.x - 160
+            if (messageLeft < -50 && messageLeft >= -220) {
+                //yellow
+                print("show reschedule")
+                self.rescheduleWrapperView.alpha = 1
+               
+            }
+            if (messageLeft < -220) {
+                //brown
+                
+                           }
+            if (messageLeft > 50 && messageLeft <= 220) {
+                //green
+               
+            }
+            if messageLeft > 220 {
+                //red
+            }
+            
+            // moves the message back to original center
             UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options:[] , animations: { () -> Void in
                 self.messageView.center = self.messageOriginalCenter
                 self.archiveViewIcon.center = self.archiveOriginalCenter
                 self.deleteViewIcon.center = self.deleteOriginalCenter
                 self.laterViewIcon.center = self.laterOriginalCenter
-            }, completion: {
-                (Bool) -> Void in
+                }, completion: {
+                    (Bool) -> Void in
             })
+
         }
 
     }

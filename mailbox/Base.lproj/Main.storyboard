@@ -76,6 +76,22 @@
                                 </segments>
                                 <color key="tintColor" red="0.49019607843137253" green="0.792156862745098" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" id="rTh-2J-9f1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reschedule" id="tHi-jP-nVY">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sFA-ON-2uQ">
+                                        <rect key="frame" x="40" y="139" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -87,6 +103,7 @@
                         <outlet property="listViewIcon" destination="Q2J-hX-c73" id="TCK-Nf-FaU"/>
                         <outlet property="messageView" destination="5DH-II-96V" id="cXI-l6-ihj"/>
                         <outlet property="messageWrapperView" destination="zlk-BR-Y2d" id="Boc-oZ-dzB"/>
+                        <outlet property="rescheduleWrapperView" destination="rTh-2J-9f1" id="y0X-qC-a7T"/>
                         <outlet property="scrollView" destination="Yhx-bJ-aUy" id="Hgm-TW-syc"/>
                     </connections>
                 </viewController>
@@ -112,6 +129,7 @@
         <image name="mail_nav_icon" width="25" height="20"/>
         <image name="message" width="320" height="86"/>
         <image name="nav" width="320" height="65"/>
+        <image name="reschedule" width="320" height="568"/>
         <image name="search" width="320" height="42"/>
     </resources>
 </document>
