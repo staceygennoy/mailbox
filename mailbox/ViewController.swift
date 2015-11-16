@@ -86,14 +86,14 @@ class ViewController: UIViewController {
             if (messageLeft < -50 && messageLeft >= -220) {
                 //yellow
                 messageWrapperView.backgroundColor = UIColor.init(colorLiteralRed: 254/255, green: 208/255, blue: 55/255, alpha: 1)
-                laterViewIcon.alpha = 0
-                listViewIcon.alpha = 1
+                laterViewIcon.alpha = 1
+                listViewIcon.alpha = 0
             }
             if (messageLeft < -220) {
                 //brown
                 messageWrapperView.backgroundColor = UIColor.brownColor()
-                laterViewIcon.alpha = 1
-                listViewIcon.alpha = 0
+                laterViewIcon.alpha = 0
+                listViewIcon.alpha = 1
             }
             if (messageLeft > 50 && messageLeft <= 220) {
                 // green
